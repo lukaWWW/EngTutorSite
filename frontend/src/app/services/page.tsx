@@ -3,13 +3,12 @@
 import { useState, useEffect } from 'react';
 import {
   UserGroupIcon,
-  ChatBubbleLeftRightIcon,
-  CalendarIcon,
-  UserIcon,
   GlobeAltIcon,
   DocumentTextIcon,
   AcademicCapIcon,
-  ChatBubbleBottomCenterTextIcon
+  ChatBubbleBottomCenterTextIcon,
+  ForwardRefExoticComponent, // Import ForwardRefExoticComponent
+  SVGProps // Import SVGProps for icon type
 } from '@heroicons/react/24/outline';
 import { motion } from 'framer-motion';
 import { apiService, ServiceItem } from '@/services/api';
@@ -20,8 +19,8 @@ import { apiService, ServiceItem } from '@/services/api';
 //   description: 'Explore our range of English tutoring services including group lessons, individual lessons, consultations, and holiday workshops.',
 // };
 
-// Icon mapping for dynamic icon selection
-const iconMap: Record<string, React.ForwardRefExoticComponent<any>> = {
+// Icon mapping for dynamic icon selection - Refined type
+const iconMap: Record<string, ForwardRefExoticComponent<SVGProps<SVGSVGElement>>> = {
   'globe.svg': GlobeAltIcon,
   'file.svg': DocumentTextIcon,
   'window.svg': AcademicCapIcon,
@@ -69,7 +68,7 @@ const ServicesPage = () => {
     return (
       <div className="container mx-auto px-4 py-12">
         <div className="text-center">
-          <p className="text-lg text-gray-600">Loading services...</p>
+          <p className="text-lg text-gray-600 dark:text-slate-400">Loading services...</p>
         </div>
       </div>
     );
@@ -79,7 +78,7 @@ const ServicesPage = () => {
     return (
       <div className="container mx-auto px-4 py-12">
         <div className="text-center">
-          <p className="text-lg text-red-600">{error || "No services available"}</p>
+          <p className="text-lg text-red-600 dark:text-red-400">{error || "No services available"}</p>
         </div>
       </div>
     );
@@ -87,7 +86,7 @@ const ServicesPage = () => {
 
   return (
     <div className="container mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold text-center mb-12">Our Services</h1>
+      <h1 className="text-4xl font-bold text-center mb-12 dark:text-white">Our Services</h1>
       <motion.div
         variants={container}
         initial="hidden"
@@ -102,11 +101,11 @@ const ServicesPage = () => {
             <motion.div
               key={service.title}
               variants={item}
-              className="bg-white rounded-lg shadow-md p-6 text-center transition-shadow duration-300 hover:shadow-xl flex flex-col items-center"
+              className="bg-white dark:bg-slate-800 rounded-lg shadow-md dark:shadow-slate-900/50 p-6 text-center transition-shadow duration-300 hover:shadow-xl dark:hover:shadow-primary-500/20 flex flex-col items-center"
             >
-              <IconComponent className="h-12 w-12 text-blue-500 mb-4" />
-              <h2 className="text-xl font-semibold mb-2">{service.title}</h2>
-              <p className="text-gray-600">{service.description}</p>
+              <IconComponent className="h-12 w-12 text-blue-500 dark:text-primary-400 mb-4" />
+              <h2 className="text-xl font-semibold mb-2 dark:text-white">{service.title}</h2>
+              <p className="text-gray-600 dark:text-slate-300">{service.description}</p>
             </motion.div>
           );
         })}

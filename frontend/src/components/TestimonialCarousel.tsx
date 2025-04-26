@@ -123,9 +123,9 @@ export default function TestimonialCarousel() {
 
   if (isLoading) {
     return (
-      <div className="relative overflow-hidden bg-white py-16 px-4 sm:px-6 lg:px-8 shadow-lg rounded-lg">
+      <div className="relative overflow-hidden bg-white dark:bg-slate-800 py-16 px-4 sm:px-6 lg:px-8 shadow-lg dark:shadow-slate-900/50 rounded-lg">
         <div className="text-center">
-          <p className="text-lg text-gray-600">Loading testimonials...</p>
+          <p className="text-lg text-gray-600 dark:text-slate-400">Loading testimonials...</p>
         </div>
       </div>
     );
@@ -133,9 +133,9 @@ export default function TestimonialCarousel() {
 
   if (error || testimonials.length === 0) {
     return (
-      <div className="relative overflow-hidden bg-white py-16 px-4 sm:px-6 lg:px-8 shadow-lg rounded-lg">
+      <div className="relative overflow-hidden bg-white dark:bg-slate-800 py-16 px-4 sm:px-6 lg:px-8 shadow-lg dark:shadow-slate-900/50 rounded-lg">
         <div className="text-center">
-          <p className="text-lg text-red-600">{error || "No testimonials available"}</p>
+          <p className="text-lg text-red-600 dark:text-red-400">{error || "No testimonials available"}</p>
         </div>
       </div>
     );
@@ -145,19 +145,19 @@ export default function TestimonialCarousel() {
 
   return (
     <div 
-      className="relative overflow-hidden bg-white py-16 px-4 sm:px-6 lg:px-8 shadow-lg rounded-lg"
+      className="relative overflow-hidden bg-white dark:bg-slate-800 py-16 px-4 sm:px-6 lg:px-8 shadow-lg dark:shadow-slate-900/50 rounded-lg"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       aria-roledescription="carousel"
       aria-label="Testimonials carousel"
     >
       <div className="absolute inset-0">
-        <div className="absolute inset-y-0 left-0 w-1/2 bg-gray-50"></div>
+        <div className="absolute inset-y-0 left-0 w-1/2 bg-gray-50 dark:bg-slate-800/50"></div>
       </div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative py-8">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+          <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">
             What Our Students Say
           </h2>
           
@@ -178,7 +178,7 @@ export default function TestimonialCarousel() {
               >
                 <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-6 sm:space-y-0 sm:space-x-6 w-full">
                   <div className="flex-shrink-0">
-                    <div className="mx-auto h-20 w-20 sm:h-32 sm:w-32 rounded-full overflow-hidden border-2 border-primary-500">
+                    <div className="mx-auto h-20 w-20 sm:h-32 sm:w-32 rounded-full overflow-hidden border-2 border-primary-500 dark:border-primary-600">
                       <Image
                         src={currentTestimonial.image}
                         alt={currentTestimonial.name}
@@ -190,15 +190,15 @@ export default function TestimonialCarousel() {
                   </div>
                   <div className="flex-1 text-center sm:text-left">
                     <blockquote>
-                      <p className="text-lg sm:text-xl font-medium text-gray-700 italic">
+                      <p className="text-lg sm:text-xl font-medium text-gray-700 dark:text-slate-300 italic">
                         &ldquo;{currentTestimonial.quote}&rdquo;
                       </p>
                       <footer className="mt-4">
                         <div className="flex flex-col sm:flex-row items-center sm:items-start">
-                          <div className="text-base font-semibold text-gray-900">
+                          <div className="text-base font-semibold text-gray-900 dark:text-white">
                             {currentTestimonial.name}
                           </div>
-                          <div className="sm:ml-2 text-base text-gray-500">
+                          <div className="sm:ml-2 text-base text-gray-500 dark:text-slate-400">
                             {currentTestimonial.role}, {currentTestimonial.location}
                           </div>
                         </div>
@@ -214,19 +214,19 @@ export default function TestimonialCarousel() {
           <div className="absolute top-1/2 left-0 right-0 flex justify-between items-center px-4 -mt-6 z-10">
             <button
               onClick={prevTestimonial}
-              className="p-2 rounded-full bg-white shadow-md hover:bg-gray-100 transition-colors"
+              className="p-2 rounded-full bg-white dark:bg-slate-700 shadow-md hover:bg-gray-100 dark:hover:bg-slate-600 transition-colors"
               aria-label="Previous testimonial"
             >
-              <svg className="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="h-6 w-6 text-gray-600 dark:text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
               </svg>
             </button>
             <button
               onClick={nextTestimonial}
-              className="p-2 rounded-full bg-white shadow-md hover:bg-gray-100 transition-colors"
+              className="p-2 rounded-full bg-white dark:bg-slate-700 shadow-md hover:bg-gray-100 dark:hover:bg-slate-600 transition-colors"
               aria-label="Next testimonial"
             >
-              <svg className="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="h-6 w-6 text-gray-600 dark:text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
               </svg>
             </button>
@@ -241,8 +241,8 @@ export default function TestimonialCarousel() {
                   setDirection(index > currentIndex ? 1 : -1);
                   setCurrentIndex(index);
                 }}
-                className={`h-2 w-2 rounded-full ${
-                  index === currentIndex ? 'bg-primary-600' : 'bg-gray-300'
+                className={`h-2 w-2 rounded-full transition-colors ${
+                  index === currentIndex ? 'bg-primary-600 dark:bg-primary-400' : 'bg-gray-300 dark:bg-slate-600'
                 }`}
                 aria-label={`Go to testimonial ${index + 1}`}
                 aria-current={index === currentIndex ? 'true' : 'false'}

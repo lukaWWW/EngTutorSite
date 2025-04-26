@@ -31,15 +31,15 @@ export default function FAQAccordion() {
   };
 
   if (isLoading) {
-    return <div className="p-8 text-center">Loading FAQ data...</div>;
+    return <div className="p-8 text-center dark:text-slate-400">Loading FAQ data...</div>;
   }
 
   if (error) {
-    return <div className="p-8 text-center text-red-500">{error}</div>;
+    return <div className="p-8 text-center text-red-500 dark:text-red-400">{error}</div>;
   }
 
   return (
-    <div className="divide-y divide-gray-200 rounded-lg bg-white shadow">
+    <div className="divide-y divide-gray-200 dark:divide-slate-700 rounded-lg bg-white dark:bg-slate-800 shadow dark:shadow-slate-900/50">
       {faqData.map((faq, index) => (
         <div key={index} className="px-4 py-6">
           <button
@@ -48,10 +48,10 @@ export default function FAQAccordion() {
             aria-expanded={activeIndex === index}
             aria-controls={`faq-answer-${index}`}
           >
-            <span className="text-lg font-medium text-gray-900">{faq.question}</span>
+            <span className="text-lg font-medium text-gray-900 dark:text-white">{faq.question}</span>
             <span className="ml-6 flex h-7 items-center">
               <svg
-                className={`h-6 w-6 transform transition-transform duration-200 ${
+                className={`h-6 w-6 transform transition-transform duration-200 text-gray-400 dark:text-slate-500 ${
                   activeIndex === index ? 'rotate-180' : 'rotate-0'
                 }`}
                 xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +85,7 @@ export default function FAQAccordion() {
                   exit={{ y: -10 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <p className="mt-4 text-base text-gray-600">{faq.answer}</p>
+                  <p className="mt-4 text-base text-gray-600 dark:text-slate-300">{faq.answer}</p>
                 </motion.div>
               </motion.div>
             )}

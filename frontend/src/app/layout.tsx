@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "./app.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { ThemeProvider } from '@/context/ThemeContext'; // Import ThemeProvider
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "EnglishTutor - Professional Language Tutoring Services",
-  description: "Professional English tutoring services for all levels and ages. Personalized lessons to help you achieve fluency.",
+  title: "EnglishTutor - Personalized English Learning",
+  description: "Achieve English fluency with personalized online tutoring.",
 };
 
 export default function RootLayout({
@@ -25,13 +26,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
-      >
-        <Header />
-        <main className="flex-grow">{children}</main>
-        <Footer />
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body>
+        <ThemeProvider> {/* Wrap content with ThemeProvider */}
+          {/* Use slightly different shades for dark mode background and text */}
+          <div className="flex flex-col min-h-screen bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-200 transition-colors duration-200">
+            <Header />
+            <main className="flex-grow">{children}</main>
+            <Footer />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

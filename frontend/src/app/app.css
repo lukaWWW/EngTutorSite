@@ -1,0 +1,40 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *)); /* Add this line for Tailwind v4 dark mode */
+
+@theme {
+  --font-family-sans: var(--font-geist-sans);
+  --font-family-mono: var(--font-geist-mono);
+
+  --color-primary-50: #f0f9ff;
+  --color-primary-100: #e0f2fe;
+  --color-primary-200: #bae6fd;
+  --color-primary-300: #7dd3fc;
+  --color-primary-400: #38bdf8;
+  --color-primary-500: #0ea5e9;
+  --color-primary-600: #0284c7;
+  --color-primary-700: #0369a1;
+  --color-primary-800: #075985;
+  --color-primary-900: #0c4a6e;
+  --color-primary-950: #082f49;
+}
+
+/* Removed commented out :root definitions */
+
+body {
+  /* background and color are now handled by the div in layout.tsx */
+  font-family: var(--font-geist-sans), Arial, sans-serif; 
+}
+
+/* The body font is now typically set via tailwind.config.js or @theme */
+/* Ensure your font variables (--font-geist-sans, --font-geist-mono) are correctly applied in layout.tsx or tailwind config */
+
+/* Custom component styles should ideally use @apply or be component-specific */
+/* Add button styles back with dark mode variants */
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-md border border-transparent bg-primary-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:bg-primary-500 dark:hover:bg-primary-600 dark:focus:ring-offset-slate-900;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-md border border-slate-300 bg-white px-4 py-2 text-base font-medium text-slate-700 shadow-sm hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:border-slate-600 dark:bg-slate-700 dark:text-slate-200 dark:hover:bg-slate-600 dark:focus:ring-offset-slate-900;
+  }
+}

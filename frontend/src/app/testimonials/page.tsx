@@ -72,7 +72,7 @@ export default function TestimonialsPage() {
     return (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center">
-          <p className="text-lg text-gray-600">Loading testimonials...</p>
+          <p className="text-lg text-gray-600 dark:text-slate-400">Loading testimonials...</p>
         </div>
       </div>
     );
@@ -82,7 +82,7 @@ export default function TestimonialsPage() {
     return (
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center">
-          <p className="text-lg text-red-600">{error || "No testimonials available"}</p>
+          <p className="text-lg text-red-600 dark:text-red-400">{error || "No testimonials available"}</p>
         </div>
       </div>
     );
@@ -90,13 +90,13 @@ export default function TestimonialsPage() {
 
   return (
     <>
-      <section className="bg-primary-50 py-16 md:py-24">
+      <section className="bg-primary-50 dark:bg-primary-900/20 py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl mb-6">
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl mb-6">
               Success Stories from Our Students
             </h1>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600 dark:text-slate-300">
               Hear directly from learners who have achieved their English goals with our personalized tutoring.
             </p>
           </div>
@@ -114,16 +114,16 @@ export default function TestimonialsPage() {
             <motion.div
               key={testimonial.id}
               variants={item}
-              className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col"
+              className="bg-white dark:bg-slate-800 rounded-lg shadow-lg dark:shadow-slate-900/50 overflow-hidden flex flex-col"
             >
               <div className="p-6 flex-grow">
                 <blockquote className="flex flex-col h-full">
-                  <p className="text-gray-600 italic mb-4 flex-grow">&ldquo;{testimonial.quote}&rdquo;</p>
+                  <p className="text-gray-600 dark:text-slate-300 italic mb-4 flex-grow">&ldquo;{testimonial.quote}&rdquo;</p>
                   <footer className="mt-auto">
                     <div className="flex items-center">
                       <div className="flex-shrink-0">
                         <Image
-                          className="h-12 w-12 rounded-full border-2 border-primary-200"
+                          className="h-12 w-12 rounded-full border-2 border-primary-200 dark:border-primary-700"
                           src={testimonial.image}
                           alt={testimonial.name}
                           width={48}
@@ -131,8 +131,8 @@ export default function TestimonialsPage() {
                         />
                       </div>
                       <div className="ml-4">
-                        <div className="text-base font-medium text-gray-900">{testimonial.name}</div>
-                        <div className="text-sm text-gray-500">{testimonial.role}, {testimonial.location}</div>
+                        <div className="text-base font-medium text-gray-900 dark:text-white">{testimonial.name}</div>
+                        <div className="text-sm text-gray-500 dark:text-slate-400">{testimonial.role}, {testimonial.location}</div>
                       </div>
                     </div>
                   </footer>
@@ -143,10 +143,10 @@ export default function TestimonialsPage() {
         </motion.div>
       </section>
 
-      <section className="bg-gray-50 py-16">
+      <section className="bg-gray-50 dark:bg-slate-900 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Start Your Own Success Story?</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Ready to Start Your Own Success Story?</h2>
+          <p className="text-xl text-gray-600 dark:text-slate-300 max-w-3xl mx-auto mb-8">
             Join hundreds of satisfied students who have improved their English fluency and confidence with our expert tutoring.
           </p>
           <Link href="/contact" className="btn-primary px-8 py-3">
