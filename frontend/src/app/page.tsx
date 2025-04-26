@@ -3,12 +3,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import TestimonialCarousel from '@/components/TestimonialCarousel'; // Import the carousel
 
 export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-white dark:bg-slate-900 overflow-hidden">
+      <section className="relative bg-white dark:bg-black overflow-hidden"> {/* Changed dark bg to black */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div 
@@ -18,10 +19,10 @@ export default function Home() {
               className="text-center md:text-left"
             >
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 dark:text-white mb-6">
-                Unlock Your <span className="text-primary-600 dark:text-primary-400">English Potential</span>
+                Unlock Your <span className="text-primary-600 dark:text-primary-400">English Potential</span> with Ksenia
               </h1>
-              <p className="text-xl text-gray-600 dark:text-slate-300 mb-8">
-                Personalized English tutoring that helps you achieve fluency with confidence. Join thousands of successful students worldwide.
+              <p className="text-xl text-gray-600 dark:text-gray-300 mb-8"> {/* Changed dark text */}
+                Personalized English tutoring designed around your goals. Achieve fluency and confidence with lessons tailored just for you.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                 <Link href="/contact" className="btn-primary text-center px-6 py-3">
@@ -39,11 +40,11 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="relative"
             >
-              <div className="rounded-lg overflow-hidden shadow-xl dark:shadow-lg dark:shadow-slate-700/50">
+              <div className="rounded-lg overflow-hidden shadow-xl dark:shadow-lg dark:shadow-gray-800/50"> {/* Changed dark shadow */}
                 <div className="aspect-w-1 aspect-h-1 w-full">
                   <Image 
-                    src="/images/tutor-headshot.jpg" 
-                    alt="English Tutor" 
+                    src="/images/tutor-headshot.jpg" // Replace with Ksenia's actual headshot path
+                    alt="Ksenia Zarubina, English Tutor" 
                     width={500} 
                     height={500}
                     className="object-cover w-full h-full"
@@ -52,8 +53,8 @@ export default function Home() {
                 </div>
               </div>
               <div className="mt-6 text-center">
-                <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Sarah Johnson</h2>
-                <p className="text-gray-600 dark:text-slate-300">Certified English Tutor, TEFL, MA in Applied Linguistics</p>
+                <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">Ksenia Zarubina</h2>
+                <p className="text-gray-600 dark:text-gray-300">Experienced English Tutor | UGE 93/100 | TOEFL B2 | Studying in Austria</p> {/* Changed dark text */}
                 
                 <div className="flex justify-center mt-4 space-x-4">
                   <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400">
@@ -83,12 +84,12 @@ export default function Home() {
       </section>
 
       {/* Why Choose Section */}
-      <section className="bg-gray-50 dark:bg-slate-800 py-16 md:py-24">
+      <section className="bg-gray-50 dark:bg-gray-900 py-16 md:py-24"> {/* Changed dark bg */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Why Choose EnglishTutor?</h2>
-            <p className="text-xl text-gray-600 dark:text-slate-300 max-w-3xl mx-auto">
-              Our tutoring approach is designed to meet your specific goals through personalized instruction.
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Why Learn English with Me?</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"> {/* Changed dark text */}
+              My tutoring approach is designed to meet your specific goals through personalized instruction based on my own learning journey.
             </p>
           </div>
           
@@ -96,7 +97,7 @@ export default function Home() {
             <motion.div 
               whileHover={{ y: -5 }}
               transition={{ duration: 0.3 }}
-              className="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-md dark:shadow-lg dark:shadow-slate-900/50"
+              className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md dark:shadow-gray-900/50" /* Changed dark bg/shadow */
             >
               <div className="bg-primary-100 dark:bg-primary-900/50 inline-block p-3 rounded-full mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -104,31 +105,31 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Personalized Curriculum</h3>
-              <p className="text-gray-600 dark:text-slate-300">
-                Lessons tailored to your specific needs, goals, and learning style for maximum progress.
+              <p className="text-gray-600 dark:text-gray-300"> {/* Changed dark text */}
+                Lessons tailored to your specific needs, goals (like UGE/TOEFL), and learning style for maximum progress.
               </p>
             </motion.div>
 
             <motion.div 
               whileHover={{ y: -5 }}
               transition={{ duration: 0.3 }}
-              className="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-md dark:shadow-lg dark:shadow-slate-900/50"
+              className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md dark:shadow-gray-900/50" /* Changed dark bg/shadow */
             >
               <div className="bg-primary-100 dark:bg-primary-900/50 inline-block p-3 rounded-full mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
+                 <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                   <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Certified Tutors</h3>
-              <p className="text-gray-600 dark:text-slate-300">
-                All our tutors hold advanced degrees and internationally recognized teaching certifications.
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Real-World Experience</h3>
+              <p className="text-gray-600 dark:text-gray-300"> {/* Changed dark text */}
+                Benefit from my experience studying and living in an English-speaking environment in Austria.
               </p>
             </motion.div>
 
             <motion.div 
               whileHover={{ y: -5 }}
               transition={{ duration: 0.3 }}
-              className="bg-white dark:bg-slate-700 p-6 rounded-lg shadow-md dark:shadow-lg dark:shadow-slate-900/50"
+              className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md dark:shadow-gray-900/50" /* Changed dark bg/shadow */
             >
               <div className="bg-primary-100 dark:bg-primary-900/50 inline-block p-3 rounded-full mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-primary-600 dark:text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -136,19 +137,22 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Flexible Scheduling</h3>
-              <p className="text-gray-600 dark:text-slate-300">
-                Book lessons at times that work for your schedule, with options for evenings and weekends.
+              <p className="text-gray-600 dark:text-gray-300"> {/* Changed dark text */}
+                Book lessons online at times that work for your schedule.
               </p>
             </motion.div>
           </div>
           
           <div className="text-center mt-12">
             <Link href="/about" className="btn-secondary">
-              Learn More About Us
+              Learn More About Me
             </Link>
           </div>
         </div>
       </section>
+      
+      {/* Testimonials Section */}
+      <TestimonialCarousel /> 
     </>
   );
 }

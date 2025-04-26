@@ -39,7 +39,7 @@ export default function FAQAccordion() {
   }
 
   return (
-    <div className="divide-y divide-gray-200 dark:divide-slate-700 rounded-lg bg-white dark:bg-slate-800 shadow dark:shadow-slate-900/50">
+    <div className="divide-y divide-gray-200 dark:divide-gray-700 rounded-lg bg-white dark:bg-gray-800 shadow dark:shadow-gray-900/50">
       {faqData.map((faq, index) => (
         <div key={index} className="px-4 py-6">
           <button
@@ -51,7 +51,7 @@ export default function FAQAccordion() {
             <span className="text-lg font-medium text-gray-900 dark:text-white">{faq.question}</span>
             <span className="ml-6 flex h-7 items-center">
               <svg
-                className={`h-6 w-6 transform transition-transform duration-200 text-gray-400 dark:text-slate-500 ${
+                className={`h-6 w-6 transform transition-transform duration-200 text-gray-400 dark:text-gray-500 ${
                   activeIndex === index ? 'rotate-180' : 'rotate-0'
                 }`}
                 xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +85,7 @@ export default function FAQAccordion() {
                   exit={{ y: -10 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <p className="mt-4 text-base text-gray-600 dark:text-slate-300">{faq.answer}</p>
+                  <p className="mt-4 text-base text-gray-600 dark:text-gray-300">{faq.answer}</p>
                 </motion.div>
               </motion.div>
             )}

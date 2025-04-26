@@ -7,9 +7,11 @@ class AboutResponse(BaseModel):
 
 
 class ServiceItem(BaseModel):
+    id: str
     icon: str
     title: str
     description: str
+    basePrice: float
 
 
 class PricingPlan(BaseModel):

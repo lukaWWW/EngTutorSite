@@ -1,22 +1,30 @@
 [
   {
+    "id": "childrens-english",
     "icon": "globe.svg",
-    "title": "General English",
-    "description": "Comprehensive English courses for everyday communication, covering all four language skills: speaking, listening, reading, and writing."
+    "title": "Children's English",
+    "description": "Engaging lessons designed for children aged 7-12, focusing on vocabulary, grammar, and conversation skills through games, songs, and interactive activities.",
+    "basePrice": 15
   },
   {
+    "id": "business-english",
     "icon": "file.svg",
     "title": "Business English",
-    "description": "Specialized courses focused on professional communication, including presentations, negotiations, email writing, and business vocabulary."
+    "description": "Specialized lessons focused on professional communication, including presentations, negotiations, email writing, and business vocabulary relevant to your field.",
+    "basePrice": 20
   },
   {
+    "id": "exam-preparation",
     "icon": "window.svg",
-    "title": "Exam Preparation",
-    "description": "Targeted preparation for IELTS, TOEFL, Cambridge exams, and other standardized English tests with practice tests and feedback."
+    "title": "Exam Preparation (UGE, TOEFL, etc.)",
+    "description": "Targeted preparation for exams like UGE, TOEFL, IELTS, Cambridge exams, and others, using practice tests and providing specific feedback based on my experience.",
+    "basePrice": 18
   },
   {
+    "id": "conversation-practice",
     "icon": "vercel.svg",
     "title": "Conversation Practice",
-    "description": "Focused sessions to improve speaking fluency, pronunciation, and build confidence in real-world conversations."
+    "description": "Focused sessions designed to improve your speaking fluency, pronunciation, and build confidence in real-world conversations on topics that interest you.",
+    "basePrice": 12
   }
 ]

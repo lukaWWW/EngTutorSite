@@ -9,9 +9,9 @@ import { apiService, Testimonial } from '@/services/api';
 interface ExtendedTestimonial extends Testimonial {
   id: number;
   name: string;
-  location: string;
-  image: string;
   role: string;
+  location: string;
+  image: string; // Added image property
 }
 
 export default function TestimonialsPage() {
@@ -36,16 +36,16 @@ export default function TestimonialsPage() {
             id: index + 1,
             name,
             role,
-            location: role.includes('from') ? role.split('from')[1].trim() : 'Student',
-            image: `/images/testimonial-${index + 1}.jpg` // Default image path
+            location: role.includes('from') ? role.split('from')[1].trim() : 'Student', // Simplified location logic
+            image: `/images/testimonial-${index + 1}.jpg` // Placeholder image path
           };
         });
         
         setTestimonials(extendedTestimonials);
-        setIsLoading(false);
       } catch (err) {
         console.error('Error fetching testimonials:', err);
         setError('Failed to load testimonials');
+      } finally {
         setIsLoading(false);
       }
     }
@@ -90,14 +90,14 @@ export default function TestimonialsPage() {
 
   return (
     <>
-      <section className="bg-primary-50 dark:bg-primary-900/20 py-16 md:py-24">
+      <section className="bg-primary-50 dark:bg-gray-900/50 py-16 md:py-24"> {/* Changed dark bg */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl mb-6">
-              Success Stories from Our Students
+              Success Stories from My Students
             </h1>
-            <p className="text-xl text-gray-600 dark:text-slate-300">
-              Hear directly from learners who have achieved their English goals with our personalized tutoring.
+            <p className="text-xl text-gray-600 dark:text-gray-300"> {/* Changed dark text */}
+              Hear directly from learners who have achieved their English goals with my personalized tutoring.
             </p>
           </div>
         </div>
@@ -114,11 +114,11 @@ export default function TestimonialsPage() {
             <motion.div
               key={testimonial.id}
               variants={item}
-              className="bg-white dark:bg-slate-800 rounded-lg shadow-lg dark:shadow-slate-900/50 overflow-hidden flex flex-col"
+              className="bg-white dark:bg-gray-800 rounded-lg shadow-lg dark:shadow-gray-900/50 overflow-hidden flex flex-col" /* Changed dark bg/shadow */
             >
               <div className="p-6 flex-grow">
                 <blockquote className="flex flex-col h-full">
-                  <p className="text-gray-600 dark:text-slate-300 italic mb-4 flex-grow">&ldquo;{testimonial.quote}&rdquo;</p>
+                  <p className="text-gray-600 dark:text-gray-300 italic mb-4 flex-grow">&ldquo;{testimonial.quote}&rdquo;</p> {/* Changed dark text */}
                   <footer className="mt-auto">
                     <div className="flex items-center">
                       <div className="flex-shrink-0">
@@ -132,7 +132,7 @@ export default function TestimonialsPage() {
                       </div>
                       <div className="ml-4">
                         <div className="text-base font-medium text-gray-900 dark:text-white">{testimonial.name}</div>
-                        <div className="text-sm text-gray-500 dark:text-slate-400">{testimonial.role}, {testimonial.location}</div>
+                        <div className="text-sm text-gray-500 dark:text-gray-400">{testimonial.role}, {testimonial.location}</div> {/* Changed dark text */}
                       </div>
                     </div>
                   </footer>
@@ -143,11 +143,11 @@ export default function TestimonialsPage() {
         </motion.div>
       </section>
 
-      <section className="bg-gray-50 dark:bg-slate-900 py-16">
+      <section className="bg-gray-50 dark:bg-gray-900 py-16"> {/* Changed dark bg */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Ready to Start Your Own Success Story?</h2>
-          <p className="text-xl text-gray-600 dark:text-slate-300 max-w-3xl mx-auto mb-8">
-            Join hundreds of satisfied students who have improved their English fluency and confidence with our expert tutoring.
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8"> {/* Changed dark text */}
+            Join students who have improved their English fluency and confidence with my expert tutoring.
           </p>
           <Link href="/contact" className="btn-primary px-8 py-3">
             Book Your Free Consultation

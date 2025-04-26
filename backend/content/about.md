@@ -1,19 +1,17 @@
-# About Our English Tutoring Services
+# About Me - Ksenia Zarubina
 
-Welcome to our English tutoring platform, where we help students from all over the world master the English language with personalized instruction and proven methodologies.
+Hello! I'm Ksenia Zarubina, and I'm passionate about helping students unlock their potential in the English language.
 
-## Our Story
+## My Journey with English
 
-Founded in 2018 by a team of passionate English teachers, our platform has grown to connect thousands of students with qualified tutors. We believe that language learning should be accessible, engaging, and tailored to each student's unique needs.
+My own language learning journey has shaped my teaching approach. Born and raised in Russia, I dedicated myself to mastering English, achieving a score of 93 out of 100 on the Unified State Exam (UGE) in English – a testament to my early commitment.
 
-## Our Mission
+My path took an exciting turn when I made the sudden decision to pursue higher education abroad. To make this dream a reality, I prepared for and successfully passed the TOEFL exam, achieving a B2 level. This opened the door for me to move to Austria, where I am currently studying entirely in English. Living and studying in an English-speaking academic environment has given me invaluable real-world experience and a deep understanding of the nuances of the language.
 
-Our mission is to break down language barriers and open doors of opportunity through effective English language education. We strive to make learning English an enjoyable journey rather than a daunting task.
+## My Teaching Experience & Approach
 
-## Our Approach
+Alongside my studies, I've gained practical experience tutoring students, helping them navigate their own English learning challenges. I understand the hurdles learners face – from mastering grammar to building conversational confidence – because I've been there myself.
 
-We combine traditional teaching methods with modern technology to create a learning experience that is both effective and engaging. Our tutors are not just teachers; they are mentors who guide students through their language learning journey.
+My approach is personalized and supportive. I believe in creating a comfortable learning environment where students feel empowered to practice and grow. I tailor my lessons to your specific goals, whether it's preparing for exams like the UGE or TOEFL, improving conversational skills, or building a strong foundation in English grammar and vocabulary.
 
-## Our Team
-
-Our team consists of qualified English teachers with extensive experience in teaching English as a second language. Many of our tutors have lived and taught in multiple countries, bringing a global perspective to their teaching approach.
+Let's work together to achieve your English language goals!

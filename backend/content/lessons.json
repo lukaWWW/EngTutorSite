@@ -1,32 +1,22 @@
 [
   {
-    "image_url": "/images/lessons/conversation.jpg",
-    "chips": ["Beginner", "Intermediate", "Advanced"],
-    "caption": "Everyday Conversation Skills for All Levels"
+    "image_url": "/images/lessons/general-english.jpg",
+    "chips": ["Grammar", "Vocabulary", "Conversation"],
+    "caption": "Build a strong foundation in General English for everyday communication."
   },
   {
-    "image_url": "/images/lessons/business.jpg",
-    "chips": ["Intermediate", "Advanced"],
-    "caption": "Business English for Professional Growth"
+    "image_url": "/images/lessons/business-english.jpg",
+    "chips": ["Meetings", "Emails", "Negotiations"],
+    "caption": "Master Business English for professional success."
   },
   {
-    "image_url": "/images/lessons/writing.jpg",
-    "chips": ["All Levels"],
-    "caption": "Academic and Creative Writing Workshop"
+    "image_url": "/images/lessons/exam-prep.jpg",
+    "chips": ["TOEFL", "IELTS", "UGE", "Strategy"],
+    "caption": "Prepare effectively for English proficiency exams."
   },
   {
-    "image_url": "/images/lessons/pronunciation.jpg",
-    "chips": ["All Levels"],
-    "caption": "Pronunciation and Accent Reduction"
-  },
-  {
-    "image_url": "/images/lessons/exam.jpg",
-    "chips": ["Intermediate", "Advanced"],
-    "caption": "IELTS and TOEFL Exam Preparation"
-  },
-  {
-    "image_url": "/images/lessons/grammar.jpg",
-    "chips": ["Beginner", "Intermediate"],
-    "caption": "Essential Grammar Foundations"
+    "image_url": "/images/lessons/conversation-practice.jpg",
+    "chips": ["Fluency", "Pronunciation", "Confidence"],
+    "caption": "Improve your conversational skills and speak with confidence."
   }
 ]

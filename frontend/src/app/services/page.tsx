@@ -1,23 +1,17 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, ForwardRefExoticComponent } from 'react';
 import {
   UserGroupIcon,
   GlobeAltIcon,
   DocumentTextIcon,
   AcademicCapIcon,
   ChatBubbleBottomCenterTextIcon,
-  ForwardRefExoticComponent, // Import ForwardRefExoticComponent
-  SVGProps // Import SVGProps for icon type
 } from '@heroicons/react/24/outline';
+import { SVGProps } from 'react';
 import { motion } from 'framer-motion';
-import { apiService, ServiceItem } from '@/services/api';
-
-// Removed metadata export since it can't be used with 'use client'
-// export const metadata = {
-//   title: 'Services - EnglishTutor',
-//   description: 'Explore our range of English tutoring services including group lessons, individual lessons, consultations, and holiday workshops.',
-// };
+import Link from 'next/link'; // Import Link component
+import { apiService, Service } from '@/services/api'; // Use Service type consistently
 
 // Icon mapping for dynamic icon selection - Refined type
 const iconMap: Record<string, ForwardRefExoticComponent<SVGProps<SVGSVGElement>>> = {
@@ -43,8 +37,8 @@ const item = {
   show: { opacity: 1, y: 0 }
 };
 
-const ServicesPage = () => {
-  const [services, setServices] = useState<ServiceItem[]>([]);
+export default function ServicesPage() {
+  const [services, setServices] = useState<Service[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -53,14 +47,14 @@ const ServicesPage = () => {
       try {
         const data = await apiService.getServices();
         setServices(data);
-        setIsLoading(false);
       } catch (err) {
         console.error('Error fetching services:', err);
         setError('Failed to load services');
+      } finally {
         setIsLoading(false);
       }
     }
-
+    
     fetchServices();
   }, []);
 
@@ -86,7 +80,7 @@ const ServicesPage = () => {
 
   return (
     <div className="container mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold text-center mb-12 dark:text-white">Our Services</h1>
+      <h1 className="text-4xl font-bold text-center mb-12 dark:text-white">My Tutoring Services</h1>
       <motion.div
         variants={container}
         initial="hidden"
@@ -98,20 +92,35 @@ const ServicesPage = () => {
           const IconComponent = iconMap[service.icon] || iconMap.default;
           
           return (
-            <motion.div
-              key={service.title}
-              variants={item}
-              className="bg-white dark:bg-slate-800 rounded-lg shadow-md dark:shadow-slate-900/50 p-6 text-center transition-shadow duration-300 hover:shadow-xl dark:hover:shadow-primary-500/20 flex flex-col items-center"
-            >
-              <IconComponent className="h-12 w-12 text-blue-500 dark:text-primary-400 mb-4" />
-              <h2 className="text-xl font-semibold mb-2 dark:text-white">{service.title}</h2>
-              <p className="text-gray-600 dark:text-slate-300">{service.description}</p>
-            </motion.div>
+            // Ensure the Link wraps the entire clickable card
+            <Link 
+              key={service.id} 
+              href={`/pricing?service=${service.id}`} 
+              passHref 
+              className="block h-full" // Make link take full height of grid cell
+            > 
+              <motion.div
+                variants={item}
+                className="bg-white dark:bg-gray-800 rounded-lg shadow-md dark:shadow-gray-900/50 p-6 text-center flex flex-col h-full group cursor-pointer" // Ensure full height and add group/cursor
+                whileHover={{ y: -5 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="mb-4 flex justify-center">
+                  <div className="bg-primary-100 dark:bg-primary-900/50 p-3 rounded-full inline-block">
+                    <IconComponent className="h-8 w-8 text-primary-600 dark:text-primary-400" />
+                  </div>
+                </div>
+                <h2 className="text-xl font-semibold mb-2 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">{service.title}</h2>
+                <p className="text-gray-600 dark:text-gray-300 flex-grow mb-4">{service.description}</p> 
+                {/* Add a visual cue for the link instead of a nested Link */}
+                <span className="mt-auto text-primary-600 dark:text-primary-400 group-hover:underline font-medium">
+                  View Pricing &rarr;
+                </span>
+              </motion.div>
+            </Link>
           );
         })}
       </motion.div>
     </div>
   );
-};
-
-export default ServicesPage;
+}

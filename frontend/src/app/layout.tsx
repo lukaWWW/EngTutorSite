@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./app.css";
 import Header from "../components/Header";
@@ -15,10 +14,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "EnglishTutor - Personalized English Learning",
-  description: "Achieve English fluency with personalized online tutoring.",
-};
 
 export default function RootLayout({
   children,
@@ -29,8 +24,8 @@ export default function RootLayout({
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>
         <ThemeProvider> {/* Wrap content with ThemeProvider */}
-          {/* Use slightly different shades for dark mode background and text */}
-          <div className="flex flex-col min-h-screen bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-200 transition-colors duration-200">
+          {/* Use neutral gray/black for dark mode background and text */}
+          <div className="flex flex-col min-h-screen bg-white dark:bg-black text-gray-900 dark:text-gray-200 transition-colors duration-200">
             <Header />
             <main className="flex-grow">{children}</main>
             <Footer />

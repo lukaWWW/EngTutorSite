@@ -4,7 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
 # Import routers
-from app.routers import about, services, pricing, testimonials, faq, lessons
+from app.routers import about, services, testimonials, faq, lessons
 
 # Create FastAPI app
 app = FastAPI(
@@ -29,7 +29,6 @@ app.add_middleware(
 # Include routers
 app.include_router(about.router)
 app.include_router(services.router)
-app.include_router(pricing.router)
 app.include_router(testimonials.router)
 app.include_router(faq.router)
 app.include_router(lessons.router)
@@ -49,7 +48,6 @@ def read_root():
         "endpoints": [
             "/about",
             "/services",
-            "/pricing",
             "/testimonials",
             "/faq",
             "/lessons",

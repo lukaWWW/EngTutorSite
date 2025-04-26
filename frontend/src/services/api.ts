@@ -24,18 +24,21 @@ export interface AboutResponse {
   content: string;
 }
 
-export interface ServiceItem {
+export interface Service {
+  id: string; // Added ID
   icon: string;
   title: string;
   description: string;
+  basePrice: number; // Added base price
 }
 
-export interface PricingPlan {
-  name: string;
-  lessons: number;
-  price: number;
-  discount_pct: number;
-}
+// Remove or comment out the old PricingPlan interface if no longer needed
+// export interface PricingPlan {
+//   name: string;
+//   lessons: number;
+//   price: number;
+//   discount_pct: number;
+// }
 
 export interface Testimonial {
   quote: string;
@@ -59,10 +62,10 @@ export const apiService = {
   getAbout: () => fetchFromAPI<AboutResponse>('/about'),
   
   // Get services
-  getServices: () => fetchFromAPI<ServiceItem[]>('/services'),
+  getServices: () => fetchFromAPI<Service[]>('/services'),
   
-  // Get pricing plans
-  getPricing: () => fetchFromAPI<PricingPlan[]>('/pricing'),
+  // Remove or comment out the old getPricing function if no longer needed
+  // getPricing: () => fetchFromAPI<PricingPlan[]>('/pricing'),
   
   // Get testimonials
   getTestimonials: () => fetchFromAPI<Testimonial[]>('/testimonials'),
