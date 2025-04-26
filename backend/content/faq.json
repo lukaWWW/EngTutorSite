@@ -1,0 +1,26 @@
+[
+  {
+    "question": "How long does each lesson last?",
+    "answer": "Our standard lessons are 50 minutes long, which gives both the student and tutor time to prepare for their next sessions."
+  },
+  {
+    "question": "What is your cancellation policy?",
+    "answer": "Lessons can be rescheduled or cancelled at least 24 hours in advance without penalty. Cancellations with less than 24 hours notice may be charged the full lesson fee."
+  },
+  {
+    "question": "How are tutors matched with students?",
+    "answer": "We match tutors with students based on the student's learning goals, English level, and scheduling needs. We also consider the teaching style of the tutor and the learning style of the student."
+  },
+  {
+    "question": "Can I change my tutor if I'm not satisfied?",
+    "answer": "Yes, you can request a different tutor at any time. We want you to have the best learning experience possible, so we'll work with you to find a tutor who meets your needs."
+  },
+  {
+    "question": "What technology do I need for the lessons?",
+    "answer": "You'll need a computer or tablet with a reliable internet connection, a webcam, and a microphone. We use Zoom for our lessons, which is free to download."
+  },
+  {
+    "question": "Do you offer group lessons?",
+    "answer": "Yes, we offer group lessons for 2-4 students at a reduced rate per person. Group lessons are great for friends, colleagues, or family members who want to learn together."
+  }
+]

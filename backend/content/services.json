@@ -1,0 +1,22 @@
+[
+  {
+    "icon": "globe.svg",
+    "title": "General English",
+    "description": "Comprehensive English courses for everyday communication, covering all four language skills: speaking, listening, reading, and writing."
+  },
+  {
+    "icon": "file.svg",
+    "title": "Business English",
+    "description": "Specialized courses focused on professional communication, including presentations, negotiations, email writing, and business vocabulary."
+  },
+  {
+    "icon": "window.svg",
+    "title": "Exam Preparation",
+    "description": "Targeted preparation for IELTS, TOEFL, Cambridge exams, and other standardized English tests with practice tests and feedback."
+  },
+  {
+    "icon": "vercel.svg",
+    "title": "Conversation Practice",
+    "description": "Focused sessions to improve speaking fluency, pronunciation, and build confidence in real-world conversations."
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "image_url": "/images/lessons/conversation.jpg",
+    "chips": ["Beginner", "Intermediate", "Advanced"],
+    "caption": "Everyday Conversation Skills for All Levels"
+  },
+  {
+    "image_url": "/images/lessons/business.jpg",
+    "chips": ["Intermediate", "Advanced"],
+    "caption": "Business English for Professional Growth"
+  },
+  {
+    "image_url": "/images/lessons/writing.jpg",
+    "chips": ["All Levels"],
+    "caption": "Academic and Creative Writing Workshop"
+  },
+  {
+    "image_url": "/images/lessons/pronunciation.jpg",
+    "chips": ["All Levels"],
+    "caption": "Pronunciation and Accent Reduction"
+  },
+  {
+    "image_url": "/images/lessons/exam.jpg",
+    "chips": ["Intermediate", "Advanced"],
+    "caption": "IELTS and TOEFL Exam Preparation"
+  },
+  {
+    "image_url": "/images/lessons/grammar.jpg",
+    "chips": ["Beginner", "Intermediate"],
+    "caption": "Essential Grammar Foundations"
+  }
+]

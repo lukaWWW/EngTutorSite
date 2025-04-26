@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Miguel Rodriguez",
+    "location": "Madrid, Spain",
+    "image": "/images/testimonial-1.jpg",
+    "role": "Business Professional",
+    "quote": "Sarah's personalized approach transformed my business English skills. In just three months, I gained the confidence to lead international meetings and negotiate with clients. Her focus on practical, real-world language has been invaluable for my career."
+  },
+  {
+    "id": 2,
+    "name": "Yuki Tanaka",
+    "location": "Tokyo, Japan",
+    "image": "/images/testimonial-2.jpg",
+    "role": "University Student",
+    "quote": "I needed to improve my academic English quickly before starting my master's program abroad. The structured lessons and detailed feedback on my essays helped me achieve a high score on my IELTS exam. Sarah's teaching style made complex grammar concepts easy to understand."
+  },
+  {
+    "id": 3,
+    "name": "Elena Petrova",
+    "location": "Moscow, Russia",
+    "image": "/images/testimonial-3.jpg",
+    "role": "Medical Doctor",
+    "quote": "As a doctor moving to an English-speaking country, I needed specialized medical vocabulary and communication skills. The custom curriculum Sarah designed exactly matched my needs, and her patience and encouragement kept me motivated throughout our sessions."
+  },
+  {
+    "id": 4,
+    "name": "Thomas Weber",
+    "location": "Berlin, Germany",
+    "image": "/images/testimonial-4.jpg",
+    "role": "Software Developer",
+    "quote": "The group workshops were an excellent way to practice conversational English in a relaxed environment. I not only improved my technical English for work but also made friends with other professionals. Great value for the price!"
+  },
+  {
+    "id": 5,
+    "name": "Priya Sharma",
+    "location": "New Delhi, India",
+    "image": "/images/testimonial-5.jpg",
+    "role": "Marketing Executive",
+    "quote": "Sarah's teaching goes beyond just language - she helped me understand cultural nuances crucial for international business communication. Her feedback on my presentation skills was particularly helpful, and I now feel much more confident in client meetings."
+  },
+  {
+    "id": 6,
+    "name": "Mohammed Al-Farsi",
+    "location": "Dubai, UAE",
+    "image": "/images/testimonial-6.jpg",
+    "role": "Finance Manager",
+    "quote": "I've tried several English tutors before, but none have been as effective as Sarah. Her method of combining grammar with practical applications helped me improve rapidly. After six months, I successfully passed my C1 Advanced exam with distinction."
+  }
+]
