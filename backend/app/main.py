@@ -4,7 +4,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
 # Import routers
-from app.routers import about, services, testimonials, faq, lessons
+from app.routers import about, testimonials, faq
+from app.routers import lessons as lessons_router # Renamed from services
 
 # Create FastAPI app
 app = FastAPI(
@@ -28,10 +29,10 @@ app.add_middleware(
 
 # Include routers
 app.include_router(about.router)
-app.include_router(services.router)
+# app.include_router(services.router) # Removed
 app.include_router(testimonials.router)
 app.include_router(faq.router)
-app.include_router(lessons.router)
+app.include_router(lessons_router.router) # Renamed from lessons.router to lessons_router.router to avoid conflict with the old lessons router that will be deleted.
 
 # Mount static files directory
 content_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), "content")
@@ -47,7 +48,7 @@ def read_root():
         "description": "API for the English Tutor Website",
         "endpoints": [
             "/about",
-            "/services",
+            # "/services", # Removed
             "/testimonials",
             "/faq",
             "/lessons",

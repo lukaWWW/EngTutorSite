@@ -1,5 +1,5 @@
 from typing import List
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Query
 from app.models import Testimonial
 from app.utils import load_testimonials
 
@@ -10,9 +10,9 @@ router = APIRouter(
 
 
 @router.get("", response_model=List[Testimonial])
-def get_testimonials():
+def get_testimonials(lang: str = Query("en", description="Language code (e.g., 'en', 'ru')")):
     """Get all testimonials"""
-    testimonials = load_testimonials()
+    testimonials = load_testimonials(lang=lang)
     if not testimonials:
-        raise HTTPException(status_code=404, detail="Testimonials not found")
+        raise HTTPException(status_code=404, detail=f"Testimonials not found for language: {lang}")
     return testimonials

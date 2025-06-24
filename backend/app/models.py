@@ -6,12 +6,18 @@ class AboutResponse(BaseModel):
     content: str
 
 
-class ServiceItem(BaseModel):
+class LessonItem(BaseModel):  # Renamed from ServiceItem
     id: str
     icon: str
     title: str
     description: str
     basePrice: float
+
+
+class LessonPreview(BaseModel):
+    image_url: str
+    chips: List[str]
+    caption: str
 
 
 class PricingPlan(BaseModel):
@@ -29,9 +35,3 @@ class Testimonial(BaseModel):
 class FAQItem(BaseModel):
     question: str
     answer: str
-
-
-class LessonPreview(BaseModel):
-    image_url: str
-    chips: List[str]
-    caption: str
